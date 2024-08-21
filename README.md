@@ -5,10 +5,12 @@
 
 ## py파일 적용
 - python pro.py
+- python con.py
 
-## topic1 실행
-- bin/kafka-console-consumer.sh --topic topic1 --from-beginning --bootstrap-server localhost:9092
+## topic1 실행 방법
+- python pro.py
+-- consumer 값 기다리는 중 [start] get consumer
+- python con.py
 
 ## 결과
-![image](https://github.com/user-attachments/assets/12afb3b3-c61b-47ae-bc04-bd96a0a37eff)
 
