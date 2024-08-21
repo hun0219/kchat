@@ -13,4 +13,5 @@
 - python con.py
 
 ## 결과
+![20240821_142642](https://github.com/user-attachments/assets/09fb0810-132b-4dea-8859-621a49d6a118)
 
