@@ -10,4 +10,5 @@
 - bin/kafka-console-consumer.sh --topic topic1 --from-beginning --bootstrap-server localhost:9092
 
 ## 결과
-https://www.notion.so/kafka-a60642a7f75f44cd88a052fdf226d82b?pvs=4#78fae7d0d863423cb2ba96ab4d82563a
+![image](https://github.com/user-attachments/assets/12afb3b3-c61b-47ae-bc04-bd96a0a37eff)
+
