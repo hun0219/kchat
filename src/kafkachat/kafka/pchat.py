@@ -7,7 +7,8 @@ import time
 
 p = KafkaProducer(
         # 보내고 싶은 서버
-        bootstrap_servers=['localhost:9092'],
+        #bootstrap_servers=['localhost:9092'],
+        bootstrap_servers=['ec2-15-165-19-52.ap-northeast-2.compute.amazonaws.com:9092'],
         # json 형태의 값을 암호화
         value_serializer=lambda x:json.dumps(x).encode('utf-8')
 )

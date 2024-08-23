@@ -17,16 +17,15 @@ def read_offset():
 saved_offset = read_offset()
 
 consumer = KafkaConsumer(
-        #"topic2",
-        #bootstrap_servers=['localhost:9092'],
-        bootstrap_servers=['ec2-15-165-19-52.ap-northeast-2.compute.amazonaws.com:9092'], # AWS DNS주소
+        #"topic1",
+        bootstrap_servers=['15.165.19.52:9092'],
         value_deserializer=lambda x: loads(x.decode('utf-8')), #json loads(load) 가져옴/ 직렬화 역 직렬화/ 바이너리를 다시 역으로
-        #consumer_timeout_ms=5000, #m/s단위
+        consumer_timeout_ms=5000, #m/s단위
         #auto_offset_reset='earliest', # 'earliest'이미 있던 데이터 포함  'latest'나중에 온거
         #auto_offset_reset='latest', # 'earliest', 'latest'
         #auto_offset_reset='earliest' if saved_offset is None else 'none',
         #auto_offset_reset='earliest' if read_offset(OFFSET_FILE) is None else 'none',
-        #group_id="tving",
+        group_id="tving",
         enable_auto_commit=False,
 )
 
@@ -34,7 +33,7 @@ print('[Start] get consumer')
 
 #saved_offset = read_offset(OFFSET_FILE)
 
-p = TopicPartition('topic2', 0)
+p = TopicPartition('topic1', 0)
 consumer.assign([p])
 
 if saved_offset is not None:
